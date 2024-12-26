@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12F</title>
+
+  </head>
+  <body>
+   <button class="js-button"
+   
+   >Add to cart</button>
+   <p class="js-p"></p>
+
+   <script>
+    const pElement = document.querySelector('.js-p');
+
+    let timeoutId; // varibale to store time out ID
+
+    // clear the existing timeout if it exists
+  
+
+    function addToCart () {
+
+      // Clear any existing timeout
+      clearTimeout(timeoutId);
+
+      // Update the message immediately 
+      pElement.innerHTML = 'Added';
+      
+      // Start a new timeout
+      timeoutId = setTimeout(() => {
+        pElement.innerHTML = ''; // Clear message after 2 seconds
+      }, 2000)
+    }
+
+    document.querySelector('.js-button')
+      .addEventListener('click', () => {
+        addToCart();
+      })
+   </script>
+  
+  </body>
+</html>
+

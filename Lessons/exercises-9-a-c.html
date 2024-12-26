@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 9 Exercises</title>
+  </head>
+  <body>
+    <!--9a-->
+    <button class="js-9a-button">9a</button>
+    <button class="js-9b-button">9b</button>
+
+    <button 
+      onclick="
+      playGame(document.querySelector('.js-heads-button'));
+      "
+      class="js-heads-button">
+      heads
+    </button>
+    <button 
+      onclick="
+      playGame(document.querySelector('.js-tails-button'));
+      "
+      class="js-tails-button">
+      tails
+  </button>
+    <p class="js-result"></p>
+
+   <script>
+
+    
+    console.log(document.querySelector('.js-9a-button'));
+    document.querySelector('.js-9b-button')
+      .innerHTML = '9b done';
+
+    function playGame(buttonElement) {
+
+      if (buttonElement === document.querySelector('.js-heads-button')) {
+        if (buttonElement.innerText ==='heads') {
+          document.querySelector('.js-result')
+            .innerHTML = 'You chose: heads';
+        }
+      } else if (buttonElement === document.querySelector('.js-tails-button')) {
+          if (buttonElement.innerText ==='tails') {
+            document.querySelector('.js-result')
+              .innerHTML = 'You chose: tails';
+          }
+      }
+
+    }
+   </script>
+  
+  </body>
+</html>
+

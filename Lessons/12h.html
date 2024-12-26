@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+
+  </head>
+  <body>
+
+    <button class="js-addto-messages">Add</button>
+    <button class="js-remove-messages">Remove</button>
+    
+ 
+
+   <script>
+
+    // save the orginal title
+
+    let originalTitle = document.title
+
+    let messages = 0;
+
+    // change the title back and forth every second
+
+    setInterval(() => {
+      if (document.title === originalTitle) {
+        document.title = `(${messages}) New messages`;
+      } else {
+        document.title = originalTitle;
+      }
+    }, 1000);
+
+    // add 1 messages each time
+    function addtoMessages() {
+      messages++;
+    }
+
+    // remove/ delete 1 message each time
+    function removeMessages() {
+      messages--;
+    }
+
+    document.querySelector('.js-addto-messages')
+      .addEventListener('click', () => {
+        addtoMessages();
+      });
+
+    document.querySelector('.js-remove-messages')
+      .addEventListener('click', () => {
+        removeMessages();
+      })
+   </script>
+  
+  </body>
+</html>
+

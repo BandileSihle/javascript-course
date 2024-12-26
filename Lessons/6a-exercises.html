@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booleands and if-statements exercises</title>
+  </head>
+  <body>
+    <script>
+      let hour = 13;
+      let name = 'Bandile';
+
+      if (hour >= 6 && hour <= 12) {
+        console.log(`Good Morning ${name}!`);
+
+      } else if(hour >= 13 && hour <= 17) {
+        console.log(`Good afternoon ${name}!`);
+
+      } else {
+        console.log(`Good night ${name}!`);
+      }
+
+      let age = 6;
+      const isHoliday = false;
+      
+      if ((age <= 6 || age >= 65) && !isHoliday) {
+        console.log('Discount');
+      } else {
+        console.log('No Discount');
+      }
+
+      const randomNumber = Math.random();
+      console.log(randomNumber);
+
+      let result = ''
+      /*
+      if (randomNumber < 0.5) {
+        result ='heads';
+      } else {
+        result ='tails';
+      }
+      */
+     randomNumber < 0.5 ? result ='heads' : result = 'tails';
+      
+      let guess = 'tails'
+
+      result === guess ? console.log('You win!') : console.log('You lose!');
+      
+    </script>
+  </body>
+</html>
+

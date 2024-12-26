@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <!--
+    Steps:
+    1. If the text is "Subscribe" => "Subscribed"
+    2. Otherwise, change it back => "Subscribe"
+    -->
+    <p>YouTube Subscribe Button</p>
+    <button onclick="
+      subscribe(); 
+      " class="js-subscribe-button">
+        Subscribe
+  </button>
+
+
+  <!-- Steps:
+    When we click the button: 
+    1. Get the text in the text box
+    2. If amount <$40, add $10
+    3. Display total on the page
+  -->
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+  /*
+  Steps:
+  When we press a key:
+  1. Check if the key is 'Enter'
+  2. If it is, do the same thing as the calculate button
+  */
+ handleCostKeyDown(event);
+  
+  ">
+  
+  <button onclick="
+    calculateTotal();
+  ">
+    Calculate
+  </button>
+  <p class="js-total-cost"></p>
+
+
+   <script>
+    // Converts a value to string
+
+    String(25);
+
+    function handleCostKeyDown(event) {
+      if(event.key === 'Enter') {
+      calculateTotal();
+   }
+    }
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost =  Number(inputElement.value);
+
+      if (cost < 40 ) {
+        cost = cost + 10;
+      }
+
+      document.querySelector('.js-total-cost')
+        .innerHTML = `$${cost}`;
+      
+
+    }
+
+    // Make code cleaner
+    // separate JavaScript from HTML
+
+    function subscribe() {
+      const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerText = 'Subscribed';
+      } else {
+        buttonElement.innerText = 'Subscribe';
+      }
+    }
+
+   </script>
+  
+  </body>
+</html>
+

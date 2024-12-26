@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11t</title>
+
+  </head>
+  <body>
+
+   <script>
+
+    const filteredFoods = [];
+
+    function removeEgg(foods) {
+
+    let eggCount = 0; // update so that only first 2 eggs removed
+
+    // reverse array to deal with last items
+    const reversedFoods = foods.reverse();
+
+    for (let i = 0; i < foods.length; i++) {
+
+      const food = reversedFoods[i];
+
+      // skip only the first 2 egg
+      if (food === 'egg' && eggCount < 2) {
+        eggCount++; // Increment counter for 'egg'
+        continue; // skip iteration of first 2 eggs
+      } else {
+        filteredFoods.push(food);
+      }
+    }
+
+    // reverse back to restore to original order
+    return filteredFoods.reverse();
+  }
+
+    console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+   </script>
+  </body>
+</html>
+

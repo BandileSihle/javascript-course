@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9H</title>
+  </head>
+  <body>
+    <input placeholder="Type something" class="js-input"
+    
+    onkeyup="
+      runInput();
+      ">
+
+    <p class="js-display"></p>
+    
+    
+
+
+   <script>
+    
+    function runInput() {
+    const inputElement = document.querySelector('.js-input');
+
+    let typing = inputElement.value;
+
+    document.querySelector('.js-display')
+      .innerHTML = `${typing}`
+    }
+   </script>
+  
+  </body>
+</html>
+

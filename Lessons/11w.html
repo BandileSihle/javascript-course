@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11w</title>
+
+  </head>
+  <body>
+
+   <script>
+  /*
+
+    const arrayStrings = ['hello', 'world', 'search', 'good', 'search'];
+
+    for (let i = 0; i < arrayStrings.length; i++) {
+
+      const myString = 'search';
+      const findString = arrayStrings.includes(myString);
+      const indexOfArray = arrayStrings.indexOf(myString);
+
+
+      if (findString) {
+        console.log(indexOfArray)
+        break;
+      } else {
+        console.log(-1)
+      }
+      
+    }
+  */
+
+    function findIndex(array, word) {
+
+      for(let i = 0; i < array.length; i++) {
+
+        const myString = word;
+        const findString = array.includes(myString);
+        const indexOfArray = array.indexOf(myString);
+
+        if (findString) {
+          return indexOfArray;
+        } else {
+          return -1;
+        }
+      }
+    }
+
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+    console.log(findIndex(['green','red','blue','red'], 'yellow'));
+
+    function unique(array) {
+      const result = [];
+
+      for (let i = 0; i < array.length; i++) {
+        // Checking if the current elements index matches the first occurence of it in the array
+
+        if (findIndex(array, array[i]) === i) {
+          result.push(array[i]);
+        }
+
+      }
+      return result;
+    }
+
+    console.log(unique(['green', 'red', 'blue', 'red']));
+    console.log(unique(['red', 'green', 'green', 'red']));
+   </script>
+  </body>
+</html>
+

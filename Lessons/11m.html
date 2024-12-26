@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11m</title>
+
+  </head>
+  <body>
+
+   <script>
+    
+    function minMax(nums) {
+
+      if (nums.length === 0) {
+        return null; // Handle empty array
+      }
+
+      let minimum = nums[0]; // we assume first number is the smallest
+
+      let maximum = nums[0]; // we assume the first number is the largest
+
+      for (let i = 0; i < nums.length; i++) {
+
+        if (nums[i] < minimum) { // checks if the current number is lesser than the first number
+          minimum = nums[i]; // update the minimum
+
+        } else if (nums[i] > maximum) { // checks if the current number is greater than the first number 
+            maximum = nums[i]; // update the maximum
+
+          }
+      }
+
+      return {minimum, maximum}; // better to return an object with both values
+    }
+  
+    console.log(minMax([1, -3, 5]));
+    console.log(minMax([-2, 3, -5, 7, 10]));
+    console.log(minMax([]));
+    console.log(minMax([3]));
+   </script>
+
+  </body>
+</html>
+

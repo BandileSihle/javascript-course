@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11n</title>
+
+  </head>
+  <body>
+
+   <script>
+   console.log('hello');
+
+   function countWords(words) {
+    let repeatedWord = {}; // empty object stores word count
+
+    for(let i = 0; i < words.length; i++) {
+
+      let word = words[i]; // gets current word
+
+      if (repeatedWord[word] === undefined) {
+        // If the word is not yet in the object, set count to 1
+        repeatedWord[word] = 1;
+      } else {
+        // If the word is already in the object, increment its count
+        repeatedWord[word] = repeatedWord[word] + 1;
+      }
+    }
+
+    return repeatedWord;
+   }
+
+   console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+   </script>
+
+  </body>
+</html>
+

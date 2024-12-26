@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>12n</title>
+
+  </head>
+  <body>
+   
+   
+  
+
+   <script>
+   
+   function removeEgg(foods) {
+    let eggCount = 0;
+
+    const filteredFoods = foods.filter((value) => {
+      if (value === 'egg' && eggCount < 2) {
+        eggCount++;
+        return false; // exclude 'egg' from new array
+      }
+      return true; // keeps everything else
+    
+    });
+
+    return filteredFoods;
+ };
+
+ console.log(removeEgg(['egg','apple','egg','egg','ham']));
+   </script>
+  
+  </body>
+</html>
+

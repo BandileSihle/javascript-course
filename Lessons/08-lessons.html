@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 8</title>
+  </head>
+  <body>
+   
+   <script>
+  // Exercises
+
+  const product = {
+    name: 'basketball',
+    priceCents: 2095,
+    ['delivery-time']: '3 days'
+  };
+
+  console.log(product);
+
+  product.priceCents = 2095 + 500;
+
+  console.log(product);
+/*
+  function comparePrice(product1, product2) {
+    if (product1.price < product2.price) {
+      return product1;
+    } else {
+        return product2;
+    }
+  }
+
+    const product1 = {
+      name: 't-shirt',
+      price: 400
+    };
+
+    const product2 = {
+      name: 'Pants',
+      price: 800
+    };
+
+ 
+
+
+  console.log(comparePrice(product1, product2));
+*/
+
+// check code!!!
+  function isSameProduct(product1, product2) {
+    if (product1.name === product2.name && product1.price === product2.price) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  const product1 = {
+    name: 'Basketball',
+    price: 200
+  };
+
+  const product2 = {
+    name: 'Basketball',
+    price: 200
+  };
+
+  console.log(isSameProduct(product1, product2));
+
+  let myText = 'I love Allah';
+
+  let lowerCase = myText.toLocaleLowerCase();
+
+  console.log(lowerCase);
+
+  let myRepeat = 'I love Allah' ;
+
+  let result = myRepeat.repeat(2);
+
+  console.log(result);
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
+

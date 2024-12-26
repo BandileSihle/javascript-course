@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11j</title>
+
+  </head>
+  <body>
+
+   <script>
+    
+    function addArrays(array1, array2) {
+      
+      const numsIncreased = [];
+
+      for(let i = 0; i < array1.length && i < array2.length; i++) {
+        const num = array1[i];
+        const num2 = array2[i];
+        numsIncreased.push(num + num2);
+      }
+      return numsIncreased;
+    }
+
+    console.log(addArrays([1, 2, 3], [4, 5, 6]));
+   </script>
+
+  </body>
+</html>
+

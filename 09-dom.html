@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> DOM</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+   
+   <script>
+    console.log(document.querySelector('button').innerHTML);
+
+    document.querySelector('button')
+      .innerHTML = 'Changed';
+    
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
+
+    /*
+    document.body.innerHTML = 'hello';
+    document.title = 'Good job!';
+    */
+
+    /*
+    //gives use title of webpage
+    console.log(document.title);
+
+    // changes the title
+    document.title = 'Changed';
+
+    // gets body HTML element and puts it inside JavaScript
+    console.log(document.body);
+    console.log(typeof document.body);
+    
+    // ,innerHTML controls all HTML inside the body
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>Good job!</button>';
+
+    // important method of document object
+
+    document.querySelector()
+    */
+
+   </script>
+  
+  </body>
+</html>
+

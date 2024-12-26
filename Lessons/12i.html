@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+
+  </head>
+  <body>
+
+    <button class="js-display-notification">Add</button>
+
+    <button class="js-stop-notification">Remove</button>
+    
+ 
+
+   <script>
+
+    document.querySelector('.js-display-notification').addEventListener('click', () => {
+     messages++;
+     displayNotifcation();
+    });
+
+    document.querySelector('.js-stop-notification').addEventListener('click', () => {
+      if (messages > 0) {
+        messages--;
+
+
+        if (messages === 0) {
+          stopNotification();
+        }
+      }
+    });
+
+    
+
+      
+    let messages = 0;
+
+    // save the intervalId in case we need to cancel it.
+    let intervalId;
+
+    // we'll use this variable to keep track of whether or not we're displaying the notification.
+    let isDisplayingNotification;
+
+    // start displaying the notification in the tab
+    // when the page first loads.
+    displayNotification();
+
+  function displayNotifcation() {
+      // If we're already displaying the notification,
+      // stop this function because we don't want to
+      // create 2 intervals at the same time.
+
+      if (isDisplayingNotification) {
+        return;
+      }
+
+      isDisplayingNotification = true;
+
+      intervalId = setInterval(() => {
+        if (document.title === 'App') {
+          document.title = `(${messages}) New messages`;
+        } else {
+          document.title = 'App';
+        }
+      }, 1000);
+    }
+
+    function stopNotification() {
+      isDisplayingNotification = false;
+
+      clearInterval(intervalId);
+      document.title = 'App';
+    }
+
+   </script>
+  
+  </body>
+</html>
+

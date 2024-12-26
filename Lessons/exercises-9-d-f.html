@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 9 Exercises</title>
+  </head>
+  <body>
+    <input class="js-input-name" 
+    onkeydown="
+     handleSubmitKeyDown(event);
+    ">
+    <button onclick="
+      submit();
+    ">
+      Submit
+    </button>
+    <p class="js-upload"></p>
+   <script>
+
+  function handleSubmitKeyDown(event) {
+    if (event.key === 'Enter') {
+      submit();
+    }
+  }
+  function submit() {
+    const inputElement = document.querySelector('.js-input-name');
+
+    let name = inputElement.value
+
+    document.querySelector('.js-upload')
+      .innerHTML = `Your name is: ${name}`;
+  }
+   </script>
+  
+  </body>
+</html>
+
